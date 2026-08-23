@@ -11,7 +11,8 @@ const app = express();
 
 const allowedOrigins = [
     "http://localhost:5173",
-    "https://8xfnbr97-5173.inc1.devtunnels.ms"
+    "https://8xfnbr97-5173.inc1.devtunnels.ms",
+    "https://devroom-client.onrender.com"
 ];
 
 app.use(cors({
