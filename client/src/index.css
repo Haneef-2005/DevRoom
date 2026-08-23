@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+/* ================================
+   DevRoom Scrollbars
+   ================================ */
+
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #334155 transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* Problem panel scrollbar */
+.problem-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #334155 transparent;
+}
+
+.problem-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.problem-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.problem-scrollbar::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 999px;
+}
+
+.problem-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
