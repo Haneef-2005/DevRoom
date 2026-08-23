@@ -9,7 +9,7 @@ import ProblemPanel from "../components/Room/ProblemPanel";
 import { useSocket } from "../hooks/useSocket";
 import { useEditor } from "../hooks/useEditor";
 
-import problems from "../data/problems";
+import problems from "../data/Problems";
 
 import MediaPanel from "../components/Room/MediaPanel";
 import { useWebRTC } from "../hooks/useWebRTC";
