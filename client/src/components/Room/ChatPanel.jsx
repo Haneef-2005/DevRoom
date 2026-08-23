@@ -43,7 +43,7 @@ function ChatPanel({
 
         try {
             const response = await fetch(
-                "https://devroom-ai.onrender.com",
+                "https://devroom-1-ggf4.onrender.com/review",
                 {
                     method: "POST",
                     headers: {
