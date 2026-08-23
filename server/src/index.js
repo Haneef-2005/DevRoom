@@ -9,11 +9,13 @@ const initializeSocket = require("./socket/socket");
 
 const app = express();
 
+const allowedOrigins = [
+    "http://localhost:5173",
+    "https://8xfnbr97-5173.inc1.devtunnels.ms"
+];
+
 app.use(cors({
-    origin: [
-        "http://localhost:5173",
-        "https://8xfnbr97-5173.inc1.devtunnels.ms"
-    ],
+    origin: allowedOrigins,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true
 }));
@@ -33,10 +35,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: [
-            "http://localhost:5173",
-            "https://8xfnbr97-5173.inc1.devtunnels.ms"
-        ],
+        origin: allowedOrigins,
         methods: ["GET", "POST"],
         credentials: true
     }
@@ -44,7 +43,7 @@ const io = new Server(server, {
 
 initializeSocket(io, rooms);
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 /* ================================
    CODE EXECUTION
@@ -124,10 +123,8 @@ app.post("/api/run", (req, res) => {
    START SERVER
 ================================ */
 
-server.listen(PORT, () => {
-
+server.listen(PORT, "0.0.0.0", () => {
     console.log(
-        `DevRoom server running on http://localhost:${PORT}`
+        `DevRoom server running on port ${PORT}`
     );
-
 });
