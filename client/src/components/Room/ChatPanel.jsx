@@ -50,7 +50,6 @@ function ChatPanel({
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify({
-                        message: currentMessage,
                         problem:
                             String(problem?.title || "") +
                             "\n\n" +
